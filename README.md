@@ -1,6 +1,6 @@
 # Tableau Neo4j Web Data Connector
 
-See /docu for detials.
+See [/docu](docu) for details.
 
 ## Author
 
