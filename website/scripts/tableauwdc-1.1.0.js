@@ -133,7 +133,7 @@
         if (!_sourceWindow) {
             _sourceWindow = evnt.source
         }
-        var payloadObj = JSON.parse(event.data);
+        var payloadObj = JSON.parse(evnt.data);
         var msgData = payloadObj.msgData;
         _applyPropertyValues(payloadObj.props);
 
