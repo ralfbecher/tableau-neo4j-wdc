@@ -1,10 +1,18 @@
-# Tableau Neo4j Web Data Connector
+# Neo4j Web Data Connector v2.0
 
-See [/docu](docu) for details.
+This Tableau WDC implements WDC version 2.1.2 and can be used with Tableau v10.1 or later:
 
-The Neo4j WDC can be used directly via GitHub Page URL:
+[https://tableau.github.io/webdataconnector/docs/wdc_library_versions](https://tableau.github.io/webdataconnector/docs/wdc_library_versions)
 
-[http://ralfbecher.github.io/tableau-neo4j-wdc/Neo4jWdc.html](http://ralfbecher.github.io/tableau-neo4j-wdc/Neo4jWdc.html)
+For details on Tableau's Web Data Connector and the WDC SDK please visit:
+
+[http://tableau.github.io/webdataconnector/](http://tableau.github.io/webdataconnector/)
+
+## Usage
+
+The Neo4j WDC v2.0 can be used directly via GitHub Page URL:
+
+[http://ralfbecher.github.io/tableau-neo4j-wdc/v2/Neo4jWdc2.html](http://ralfbecher.github.io/tableau-neo4j-wdc/v2/Neo4jWdc2.html)
 
 ![Neo4j WDC](tableau-neo4j-wdc.png)
 
@@ -18,7 +26,7 @@ The Neo4j WDC can be used directly via GitHub Page URL:
 
 ## License
 
-Copyright © 2015 Ralf Becher
+Copyright © 2016 Ralf Becher
 
 Released under the MIT license.
 
