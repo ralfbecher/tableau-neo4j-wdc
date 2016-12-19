@@ -14,6 +14,10 @@ The Neo4j WDC v2.0 can be used directly via GitHub Page URL:
 
 [http://ralfbecher.github.io/tableau-neo4j-wdc/v2/Neo4jWdc2.html](http://ralfbecher.github.io/tableau-neo4j-wdc/v2/Neo4jWdc2.html)
 
+The Neo4j WDC v1.0 can still be used via new URL:
+
+[http://ralfbecher.github.io/tableau-neo4j-wdc/v1/Neo4jWdc.html](http://ralfbecher.github.io/tableau-neo4j-wdc/v1/Neo4jWdc1.html)
+
 ![Neo4j WDC](tableau-neo4j-wdc.png)
 
 ## Author
