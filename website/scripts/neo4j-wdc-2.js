@@ -337,6 +337,7 @@ function _determineType(primitive) {
     // possible types: 'float', 'date', 'datetime', 'bool', 'string', 'int'
     if (parseInt(primitive) == primitive) return 'int';
     if (parseFloat(primitive) == primitive) return 'float';
+    if (primitive === true || primitive === false) return 'bool';
     if (isFinite(new Date(primitive).getTime())) return 'datetime';
     return 'string';
 }
