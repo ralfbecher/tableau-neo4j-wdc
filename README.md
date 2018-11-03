@@ -1,6 +1,6 @@
-# Neo4j Web Data Connector v2.0
+# Neo4j Web Data Connector v2.3
 
-This Tableau WDC implements WDC version 2.1.2 and can be used with Tableau v10.1 or later and Neo4j v3.0.4 or later:
+This Tableau WDC implements WDC v2.3.0 and can be used with Tableau v10.4 or later and Neo4j v3.0.4 or later:
 
 [https://tableau.github.io/webdataconnector/docs/wdc_library_versions](https://tableau.github.io/webdataconnector/docs/wdc_library_versions)
 
@@ -8,17 +8,27 @@ For details on Tableau's Web Data Connector and the WDC SDK please visit:
 
 [http://tableau.github.io/webdataconnector](http://tableau.github.io/webdataconnector)
 
-This WDC uses the Neo4j Driver for Javascript which implements the [Bolt](https://en.wikipedia.org/wiki/Bolt_%28network_protocol%29) network protocol:
+The Neo4j WDC uses the Neo4j Driver for Javascript v1.7 which implements the [Bolt](https://en.wikipedia.org/wiki/Bolt_%28network_protocol%29) network protocol:
 
 [https://github.com/neo4j/neo4j-javascript-driver](https://github.com/neo4j/neo4j-javascript-driver)
 
+## Updates
+
+### New in Version 2.3
+* Neo4j [Temporal values](https://neo4j.com/docs/developer-manual/current/cypher/syntax/temporal/)
+  * converts Neo4j Date and DateTime values to Tableau Date or DateTime
+  * converts Neo4j Time values to Tableau Integer (seconds of the day)
+  * doesn't convert Neo4j Duration values but creates separate columns for all parts (months, days, seconds, nanoseconds)
+* Neo4j [Spatial values](https://neo4j.com/docs/developer-manual/current/cypher/syntax/spatial/)
+  * converts Neo4j Point values to Tableau Geometry (GeoJSON)
+
 ## Usage
 
-The Neo4j WDC v2.0 can be used directly via GitHub Page URL:
+The Neo4j WDC v2.3 can be used online via hosted GitHub page. Here is the WDC URL you can copy to your Tableau client:
 
-[http://ralfbecher.github.io/tableau-neo4j-wdc/v2/Neo4jWdc2.html](http://ralfbecher.github.io/tableau-neo4j-wdc/v2/Neo4jWdc2.html) (copy URL)
+[http://ralfbecher.github.io/tableau-neo4j-wdc/v2.3/Neo4jWdc2.html](http://ralfbecher.github.io/tableau-neo4j-wdc/v2.3/Neo4jWdc2.html) (copy URL)
 
-![Neo4j WDC 2](tableau-neo4j-wdc2.png)
+![Neo4j WDC 2.3](tableau-neo4j-wdc2.png)
 
 ### Connector Parameters
 
@@ -31,30 +41,7 @@ row includes all properties
 5. **Cypher Queries**: a list to add up to 5 Cypher queries for execution; use a table name per query in left column; 
 tables can then be joined in Tableau data wizard later
 
-![Neo4j WDC 2 Tableau Data Wizard](tableau-neo4j-wdc2-wizard.png)
-
-<!---
-### Run Neo4j WDC as Server Extension
-
-Copy the extension library ```neo4j-web-extension-tableau-wdc-2.0.0.jar``` into the server’s plugin directory: 
-
-```cp neo4j-web-extension-tableau-wdc-2.0.0.jar $NEO4J_SERVER_HOME/plugins```
-
-Edit ```conf/neo4j.conf``` to register the package name with an endpoint:
-
-```
-#Comma separated list of JAXRS packages containing JAXRS Resource, one package name for each mountpoint.
-dbms.unmanaged_extension_classes=org.neo4j.tableau.wdc=/tableau/wdc
-```
-
-Restart the server:
-
-```/path/to/neo/bin/neo4j restart```
-
-Then navigate in browser to the extension URL including HTTP Basic Authentication as URL parameters to start the Neo4j WDC Form:
-
-```http://<username>:<password>@localhost:7474/tableau/wdc/```
---->
+![Neo4j WDC 2.3 Tableau Data Wizard](tableau-neo4j-wdc2-wizard.png)
 
 ## Previous Version
 
